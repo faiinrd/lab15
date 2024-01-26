@@ -17,3 +17,14 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int A[] = {a,b,c,d};
+	for(int i=0; i<4; i++){
+		int j = rand()%4;
+		int x=A[i];
+		A[i]=A[j];
+		A[j]=x;
+	}
+	a=A[0]; b=A[1]; c=A[2]; d=A[3];
+}
